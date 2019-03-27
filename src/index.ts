@@ -1,5 +1,7 @@
 import { breakCache } from "./CacheBreaker";
+import { ensureTypescriptInstalled } from "./Utils";
 
+ensureTypescriptInstalled();
 // kill cache if required beforehand
 breakCache();
 
@@ -23,6 +25,7 @@ export { PostCSS } from "./plugins/stylesheet/PostCSSPlugin";
 export { PostCSS as PostCSSPlugin } from "./plugins/stylesheet/PostCSSPlugin";
 export { SVGPlugin } from "./plugins/images/SVGPlugin";
 export { BabelPlugin } from "./plugins/js-transpilers/BabelPlugin";
+export { Babel7Plugin } from "./plugins/js-transpilers/Babel7Plugin";
 export { BublePlugin } from "./plugins/js-transpilers/BublePlugin";
 export { CoffeePlugin } from "./plugins/js-transpilers/CoffeePlugin";
 export { LESSPlugin } from "./plugins/stylesheet/LESSPlugin";
@@ -32,6 +35,7 @@ export { MarkdownPlugin } from "./plugins/Markdownplugin";
 export { JSONPlugin } from "./plugins/JSONplugin";
 export { BannerPlugin } from "./plugins/BannerPlugin";
 export { SassPlugin } from "./plugins/stylesheet/SassPlugin";
+export { TerserPlugin } from "./plugins/TerserPlugin";
 export { UglifyESPlugin } from "./plugins/UglifyESPlugin";
 export { UglifyJSPlugin } from "./plugins/UglifyJSPlugin";
 export { SourceMapPlainJsPlugin } from "./plugins/SourceMapPlainJsPlugin";
@@ -40,13 +44,13 @@ export { OptimizeJSPlugin } from "./plugins/OptimizeJSPlugin";
 export { Fluent } from "./arithmetic/Fluent";
 export { FuseBox } from "./core/FuseBox";
 export { Sparky } from "./sparky/Sparky";
-export { SparkyContext } from './sparky/SparkyContext';
-export { CLI } from "./cli/Cli";
-export { CSSModules } from "./plugins/stylesheet/CSSModules";
+export { SparkyContext } from "./sparky/SparkyContext";
+export { CSSModules, CSSModulesPlugin } from "./plugins/stylesheet/CSSModules";
 export { CopyPlugin } from "./plugins/CopyPlugin";
 export { WebIndexPlugin } from "./plugins/WebIndexPlugin";
 export { PlainJSPlugin } from "./plugins/PlainJSPlugin";
 export { ConsolidatePlugin } from "./plugins/ConsolidatePlugin";
+export { StyledComponentsPlugin } from "./plugins/StyledComponentsPlugin";
 export { File } from "./core/File";
 import * as _SparkyCollection from "./sparky/index";
 export const SparkyCollection = _SparkyCollection;
